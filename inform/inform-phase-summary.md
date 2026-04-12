@@ -20,9 +20,9 @@ AWS Cost Explorer was configured to expose gross usage charges. Three views were
 
 | View | Purpose | Screenshot |
 |---|---|---|
-| Service breakdown | Identify top cost drivers by service | [cost-explorer-service-breakdown.png](screenshots/cost-explorer-service-breakdown.png) |
-| EC2-Other usage types | Expose NAT Gateway and public IPv4 charges hidden under EC2-Other | [cost-explorer-ec2-other.png](screenshots/cost-explorer-ec2-other.png) |
-| Daily spend trend | Establish burn rate baseline | [cost-explorer-daily-trend.png](screenshots/cost-explorer-daily-trend.png) |
+| Service breakdown | Identify top cost drivers by service | [cost-explorer-service-breakdown.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-by-service.png) |
+| EC2-Other usage types | Expose NAT Gateway and public IPv4 charges hidden under EC2-Other | [cost-explorer-ec2-other.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-ec2-other.png) |
+| Daily spend trend | Establish burn rate baseline | [cost-explorer-daily-trend.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-daily-trend.png) |
 
 The EC2-Other view was the most revealing. NAT Gateway hourly charges completely dominated the bar, while data processing charges were negligible — confirming that NAT Gateway cost is almost entirely a fixed standing charge, not a traffic-driven one.
 
@@ -62,15 +62,6 @@ Extrapolated from the 5-day actual billing period (April 1–5, 2026). Daily rat
 | Tagging coverage | 100% across 16 taggable resources |
 | Cost per employee/month | $0.16 |
 | Cost per working day | $3.54 |
-
----
-
-## Artifacts
-
-| Artifact | Description |
-|---|---|
-| [cost-allocation-report.md](cost-allocation-report.md) | Full cost baseline, tagging schema, allocation model, and unit economics |
-| [screenshots/](screenshots/) | Cost Explorer views captured as portfolio evidence |
 
 ---
 

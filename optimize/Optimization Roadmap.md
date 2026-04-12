@@ -30,7 +30,7 @@ Tier numbers reflect strategic priority weight. Implementation sequence follows 
 | Opportunistic | Low (1–2) | Low (1–2) | Execute when capacity allows — low cost, low return |
 | Deprioritise | Low (1–2) | High (3–5) | Deprioritise — low return relative to effort |
 
-> Priority quadrant visualization: [FinOps Optimization Priority Matrix](finops-optimization-quadrant.html)
+> Optimization Priority Matrix: [Interactive Optimization Priority Matrix](https://claude.ai/public/artifacts/8ad868dc-40dc-4c93-8d6f-50b5a7d9dbab)
 
 ---
 
