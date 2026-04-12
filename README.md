@@ -57,15 +57,17 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 
 **Optimization inventory**
 
+**Legend:** ↓ Cost saving &nbsp;&nbsp; ↑ Cost increase &nbsp;&nbsp; — Not applicable
+
 | # | Optimization | Analysis | Quadrant | Dev impact | Prod impact |
 |---|---|---|---|---|---|
-| 1 | EC2 scheduled scaling | [↗](optimize/ec2-rightsizing-optimization-analysis.md) | Prioritise | +$2.72/mo | +$2.72/mo |
-| 2 | NAT GW → NAT Instance | [↗](optimize/nat-gateway-optimization-analysis.md) | Invest | +$23.56/mo | — |
-| 3 | NAT GW + VPC Endpoints | [↗](optimize/nat-gateway-optimization-analysis.md) | Invest | — | +$43.20/mo* |
-| 4 | RDS gp2 → gp3 | [↗](optimize/rds-optimization-analysis.md) | Opportunistic | Value opt. | Value opt. |
-| 5 | Release NAT GW EIP | [↗](optimize/vpc-public-ipv4-optimization-analysis.md) | Opportunistic | +$3.90/mo | — |
-| 6 | RDS Reserved Instance | [↗](optimize/rds-optimization-analysis.md) | Opportunistic | — | +$2.88/mo |
-| 7 | Convert ALB to internal | [↗](optimize/vpc-public-ipv4-optimization-analysis.md) | Deprioritise | Deferred | Deferred |
+| 1 | EC2 scheduled scaling | [↗](ec2-rightsizing-optimization-analysis.md) | Prioritise | ↓$2.72/mo | ↓$2.72/mo |
+| 2 | NAT GW → NAT Instance | [↗](nat-gateway-optimization-analysis.md) | Invest | ↓$23.56/mo | — |
+| 3 | NAT GW + VPC Endpoints | [↗](nat-gateway-optimization-analysis.md) | Invest | — | ↑$43.20/mo* |
+| 4 | RDS gp2 → gp3 | [↗](rds-optimization-analysis.md) | Opportunistic | Value optimization | Value optimization |
+| 5 | Release NAT GW EIP | [↗](vpc-public-ipv4-optimization-analysis.md) | Opportunistic | ↓$3.90/mo | — |
+| 6 | RDS Reserved Instance | [↗](rds-optimization-analysis.md) | Opportunistic | — | ↓$2.88/mo |
+| 7 | Convert ALB to internal | [↗](vpc-public-ipv4-optimization-analysis.md) | Deprioritise | Deferred | Deferred |
 
 *Cost increase — justified on security, operational resilience, and scalability grounds. See [NAT Gateway analysis](optimize/nat-gateway-optimization-analysis.md).
 
@@ -73,8 +75,8 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 
 | Phase | Gross baseline | Post-optimization | Impact |
 |---|---|---|---|
-| Dev | $77.88/mo | ~$47.70/mo | -$30.18/mo saving |
-| Prod | $80.13/mo | ~$42.53/mo | -$37.60/mo net* |
+| Dev | $77.88/mo | ~$47.70/mo | ↑$30.18/mo saving |
+| Prod | $80.13/mo | ~$42.53/mo | ↑$37.60/mo net* |
 
 *Prod net impact reflects the NAT GW + VPC Endpoints cost increase absorbed against savings elsewhere.
 
