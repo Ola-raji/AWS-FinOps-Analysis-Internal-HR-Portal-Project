@@ -45,7 +45,7 @@ Real billing data extracted from AWS Cost Explorer and analysed against the work
 |---|---|
 | Cost per employee/month | $0.16 |
 | Cost per working day | $3.54 |
-| Networking cost ratio | 50% |
+| Networking cost ratio | 67% |
 
 ---
 
