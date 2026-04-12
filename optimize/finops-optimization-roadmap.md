@@ -1,4 +1,4 @@
-# FinOps Optimization Roadmap
+# HR Portal Optimization Roadmap
 
 **Architecture:** HA Three-Tier AWS · us-east-1 · Internal HR Portal
 **Baseline:** $77.88/month gross · April 2026
