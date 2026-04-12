@@ -4,7 +4,7 @@
 
 ### What this project is about
 
-This project takes a previously built production-grade, highly available three-tier AWS architecture and applies end-to-end FinOps practice to it — using it as the infrastructure subject for a real cost visibility, optimization, and governance exercise.
+This project takes a previously built production-grade, highly available three-tier AWS architecture and applies end-to-end FinOps practice to it, using it as the infrastructure subject for a real cost visibility, optimization, and governance exercise.
 
 The architecture was originally designed as a general-purpose HA pattern, subsequently adopted as the foundation for an internal read-only HR portal serving 500 employees. The portal provides staff access to employee records, payroll information, HR policies, benefits documentation, and the organisational directory — all read-only, with no write or transactional capability.
 
