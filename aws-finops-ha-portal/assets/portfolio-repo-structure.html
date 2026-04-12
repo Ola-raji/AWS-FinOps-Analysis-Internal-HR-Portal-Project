@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinOps Portfolio — Repository Structure</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9f9f7; color: #1a1a18; padding: 2rem; }
+  .wrap { max-width: 700px; margin: 0 auto; }
+  h1 { font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+  .sub { font-size: 13px; color: #5f5e5a; margin-bottom: 1.5rem; }
+  .repo { font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace; font-size: 13px; background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 1.5rem; }
+  .line { display: flex; align-items: flex-start; padding: 2px 0; line-height: 1.6; }
+  .tree { color: #b4b2a9; white-space: pre; flex-shrink: 0; }
+  .name { color: #1a1a18; }
+  .name.folder { font-weight: 500; }
+  .name.file { color: #5f5e5a; }
+  .name.root { font-size: 14px; font-weight: 500; color: #1a1a18; }
+  .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 4px; margin-left: 10px; flex-shrink: 0; }
+  .b-new { background: #eaf3de; color: #27500a; }
+  .b-done { background: #e6f1fb; color: #0c447c; }
+  .b-asset { background: #faeeda; color: #633806; }
+  .divider { border: none; border-top: 0.5px solid #d3d1c7; margin: 14px 0; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 1.25rem; font-size: 12px; color: #5f5e5a; }
+  .leg { display: flex; align-items: center; gap: 6px; }
+  .leg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FinOps Portfolio — Repository Structure</h1>
+  <p class="sub">aws-finops-ha-portal · April 2026</p>
+
+  <div class="repo">
+    <div class="line"><span class="name root">aws-finops-ha-portal/</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">├── </span><span class="name file">README.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">├── </span><span class="name folder">/architecture/</span></div>
+    <div class="line"><span class="tree">│   └── </span><span class="name file">architecture-overview.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">├── </span><span class="name folder">/inform/</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">inform-phase-summary.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">cost-allocation-report.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│   └── </span><span class="name folder">/screenshots/</span></div>
+    <div class="line"><span class="tree">│       ├── </span><span class="name file">cost-explorer-service-breakdown.png</span></div>
+    <div class="line"><span class="tree">│       ├── </span><span class="name file">cost-explorer-ec2-other.png</span></div>
+    <div class="line"><span class="tree">│       └── </span><span class="name file">cost-explorer-daily-trend.png</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">├── </span><span class="name folder">/optimize/</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">optimize-phase-summary.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">nat-gateway-optimization-analysis.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">vpc-public-ipv4-optimization-analysis.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">ec2-rightsizing-optimization-analysis.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">rds-optimization-analysis.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">finops-optimization-roadmap.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   └── </span><span class="name folder">/screenshots/</span></div>
+    <div class="line"><span class="tree">│       └── </span><span class="name file">tag-editor-coverage.png</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">├── </span><span class="name folder">/operate/</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">operate-phase-summary.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">tagging-governance-policy.md</span><span class="badge b-done">Done</span></div>
+    <div class="line"><span class="tree">│   ├── </span><span class="name file">budget-and-anomaly-detection.md</span><span class="badge b-new">To write</span></div>
+    <div class="line"><span class="tree">│   └── </span><span class="name folder">/screenshots/</span></div>
+    <div class="line"><span class="tree">│       ├── </span><span class="name file">aws-budgets-config.png</span></div>
+    <div class="line"><span class="tree">│       └── </span><span class="name file">cost-anomaly-detection-config.png</span></div>
+    <div class="line"><span class="tree">│</span></div>
+
+    <div class="line"><span class="tree">└── </span><span class="name folder">/assets/</span></div>
+    <div class="line"><span class="tree">    ├── </span><span class="name file">finops-optimization-quadrant.html</span><span class="badge b-asset">Interactive</span></div>
+    <div class="line"><span class="tree">    └── </span><span class="name file">finops-project-phase-tracker.html</span><span class="badge b-asset">Interactive</span></div>
+
+    <hr class="divider">
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:#27500a;"></div>To write — pending</div>
+      <div class="leg"><div class="leg-dot" style="background:#0c447c;"></div>Done — ready to commit</div>
+      <div class="leg"><div class="leg-dot" style="background:#633806;"></div>Interactive HTML asset</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinOps Optimization Priority Matrix</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9f9f7; color: #1a1a18; padding: 2rem; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+  .sub { font-size: 13px; color: #5f5e5a; margin-bottom: 1.25rem; }
+  .rubric { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 1.25rem; }
+  .rub-card { border-radius: 8px; padding: 10px 12px; border: 0.5px solid; }
+  .rub-title { font-size: 12px; font-weight: 500; margin-bottom: 3px; }
+  .rub-sub { font-size: 11px; opacity: 0.8; line-height: 1.4; }
+  .r1 { background: #E1F5EE; border-color: #5DCAA5; color: #085041; }
+  .r2 { background: #E6F1FB; border-color: #85B7EB; color: #0C447C; }
+  .r3 { background: #FAEEDA; border-color: #EF9F27; color: #633806; }
+  .r4 { background: #F1EFE8; border-color: #B4B2A9; color: #5F5E5A; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 1rem; font-size: 12px; color: #5f5e5a; }
+  .leg-item { display: flex; align-items: center; gap: 6px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .chart-wrap { position: relative; width: 100%; height: 500px; background: #fff; border: 0.5px solid #d3d1c7; border-radius: 12px; padding: 1rem; }
+  .note { font-size: 11px; color: #888780; margin-top: 1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FinOps Optimization Priority Matrix</h1>
+  <p class="sub">HA Three-Tier AWS · us-east-1 · Internal HR Portal · April 2026</p>
+
+  <div class="rubric">
+    <div class="rub-card r1">
+      <div class="rub-title">Prioritise</div>
+      <div class="rub-sub">Impact 3–5 · Effort 1–2<br>Execute immediately</div>
+    </div>
+    <div class="rub-card r2">
+      <div class="rub-title">Invest</div>
+      <div class="rub-sub">Impact 3–5 · Effort 3–5<br>Plan and commit</div>
+    </div>
+    <div class="rub-card r3">
+      <div class="rub-title">Opportunistic</div>
+      <div class="rub-sub">Impact 1–2 · Effort 1–2<br>Execute when capacity allows</div>
+    </div>
+    <div class="rub-card r4">
+      <div class="rub-title">Deprioritise</div>
+      <div class="rub-sub">Impact 1–2 · Effort 3–5<br>Deprioritise</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#1D9E75;"></div>Prioritise</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#185FA5;"></div>Invest</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#BA7517;"></div>Opportunistic</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#888780;"></div>Deprioritise</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#d3d1c7; border: 1px solid #888780;"></div>Bubble size = impact magnitude</div>
+  </div>
+
+  <div class="chart-wrap">
+    <canvas id="bubbleChart" role="img" aria-label="Priority quadrant bubble chart showing 7 optimization items plotted by effort and impact. Bubble size represents impact magnitude.">
+      EC2 scheduled scaling: effort 1, impact 4, Prioritise. NAT GW to NAT Instance: effort 4, impact 3, Invest. NAT GW plus VPC Endpoints: effort 4, impact 4, Invest. RDS gp2 to gp3: effort 1, impact 2, Opportunistic. Release NAT GW EIP: effort 1, impact 1, Opportunistic. RDS Reserved Instance: effort 2, impact 2, Opportunistic. Convert ALB to internal: effort 5, impact 1, Avoid.
+    </canvas>
+  </div>
+
+  <p class="note">Bubble size reflects impact magnitude (1–5 scale). Hover over each bubble for detail. Scoring rubric: Impact ≥ 3 = High · Impact ≤ 2 = Low · Effort ≥ 3 = High · Effort ≤ 2 = Low · Quadrants: Prioritise · Invest · Opportunistic · Deprioritise · FinOps Portfolio Project · April 2026</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const items = [
+  { label: 'EC2 scheduled scaling', x: 1, y: 4, impact: 4, color: '#1D9E75', phase: 'Dev + Prod', saving: '+$2.72/mo', quadrant: 'Prioritise' },
+  { label: 'NAT GW → NAT Instance', x: 4, y: 3, impact: 3, color: '#185FA5', phase: 'Dev', saving: '+$23.56/mo', quadrant: 'Invest' },
+  { label: 'NAT GW + VPC Endpoints', x: 4, y: 4, impact: 4, color: '#185FA5', phase: 'Prod', saving: '+$43.20/mo (cost↑)', quadrant: 'Invest' },
+  { label: 'RDS gp2 → gp3', x: 1, y: 2, impact: 2, color: '#BA7517', phase: 'Dev + Prod', saving: 'Value optimization', quadrant: 'Opportunistic' },
+  { label: 'Release NAT GW EIP', x: 1.3, y: 1, impact: 1, color: '#BA7517', phase: 'Dev', saving: '+$3.90/mo', quadrant: 'Opportunistic' },
+  { label: 'RDS Reserved Instance', x: 2, y: 2, impact: 2, color: '#BA7517', phase: 'Prod', saving: '+$2.88/mo', quadrant: 'Opportunistic' },
+  { label: 'Convert ALB to internal', x: 5, y: 1, impact: 1, color: '#888780', phase: 'Deferred', saving: 'VPN cost exceeds saving', quadrant: 'Deprioritise' },
+];
+
+const radiusMap = { 1: 10, 2: 16, 3: 22, 4: 28 };
+
+const labelOffsets = [
+  { dx: 0, dy: -36 },
+  { dx: 0, dy: 32 },
+  { dx: 0, dy: -36 },
+  { dx: 0, dy: -26 },
+  { dx: 0, dy: 20 },
+  { dx: 30, dy: 0 },
+  { dx: 0, dy: -22 },
+];
+
+const datasets = items.map(item => ({
+  label: item.label,
+  data: [{ x: item.x, y: item.y, r: radiusMap[item.impact] }],
+  backgroundColor: item.color + 'bb',
+  borderColor: item.color,
+  borderWidth: 1.5,
+}));
+
+new Chart(document.getElementById('bubbleChart'), {
+  type: 'bubble',
+  data: { datasets },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: { padding: { top: 30, right: 30, bottom: 20, left: 10 } },
+    scales: {
+      x: {
+        min: 0, max: 6.5,
+        title: { display: true, text: 'Effort →', color: '#888780', font: { size: 12 } },
+        ticks: { stepSize: 1, color: '#888780', font: { size: 11 },
+          callback: v => v === 1 ? 'Low (1)' : v === 3 ? 'Medium (3)' : v === 5 ? 'High (5)' : '' },
+        grid: { color: 'rgba(136,135,128,0.12)' },
+      },
+      y: {
+        min: 0, max: 5.5,
+        title: { display: true, text: 'Impact →', color: '#888780', font: { size: 12 } },
+        ticks: { stepSize: 1, color: '#888780', font: { size: 11 },
+          callback: v => v === 1 ? 'Low (1)' : v === 3 ? 'Medium (3)' : v === 5 ? 'High (5)' : '' },
+        grid: { color: 'rgba(136,135,128,0.12)' },
+      }
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const d = items[ctx.datasetIndex];
+            return [
+              ` ${d.label}`,
+              ` Quadrant: ${d.quadrant}`,
+              ` Impact: ${d.impact}/5 · Effort: ${d.x}/5`,
+              ` Phase: ${d.phase}`,
+              ` ${d.saving}`
+            ];
+          }
+        }
+      }
+    }
+  },
+  plugins: [{
+    id: 'quadrantOverlay',
+    beforeDraw(chart) {
+      const { ctx, chartArea: { left, right, top, bottom } } = chart;
+      const midX = left + (right - left) * (2.5 / 6.5);
+      const midY = top + (bottom - top) * (1 - 2.5 / 5.5);
+      ctx.save();
+      ctx.fillStyle = 'rgba(29,158,117,0.05)';
+      ctx.fillRect(left, top, midX - left, midY - top);
+      ctx.fillStyle = 'rgba(24,95,165,0.05)';
+      ctx.fillRect(midX, top, right - midX, midY - top);
+      ctx.fillStyle = 'rgba(186,117,23,0.05)';
+      ctx.fillRect(left, midY, midX - left, bottom - midY);
+      ctx.fillStyle = 'rgba(136,135,128,0.05)';
+      ctx.fillRect(midX, midY, right - midX, bottom - midY);
+      ctx.setLineDash([4, 4]);
+      ctx.strokeStyle = 'rgba(136,135,128,0.3)';
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(midX, top); ctx.lineTo(midX, bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(left, midY); ctx.lineTo(right, midY); ctx.stroke();
+      ctx.font = '500 11px -apple-system, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(29,158,117,0.55)';
+      ctx.fillText('Prioritise', left + (midX - left) / 2, top + 16);
+      ctx.fillStyle = 'rgba(24,95,165,0.55)';
+      ctx.fillText('Invest', midX + (right - midX) / 2, top + 16);
+      ctx.fillStyle = 'rgba(186,117,23,0.55)';
+      ctx.fillText('Opportunistic', left + (midX - left) / 2, bottom - 8);
+      ctx.fillStyle = 'rgba(136,135,128,0.55)';
+      ctx.fillText('Deprioritise', midX + (right - midX) / 2, bottom - 8);
+      ctx.restore();
+    },
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      ctx.save();
+      ctx.font = '11px -apple-system, sans-serif';
+      items.forEach((item, i) => {
+        const meta = chart.getDatasetMeta(i);
+        if (!meta.data[0]) return;
+        const { x, y } = meta.data[0].getCenterPoint();
+        const off = labelOffsets[i];
+        ctx.fillStyle = item.color;
+        ctx.textAlign = off.dx !== 0 ? 'left' : 'center';
+        ctx.fillText(item.label, x + off.dx, y + off.dy);
+      });
+      ctx.restore();
+    }
+  }]
+});
+</script>
+</body>
+</html>
