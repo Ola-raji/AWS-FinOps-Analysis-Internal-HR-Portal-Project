@@ -51,7 +51,7 @@ Real billing data extracted from AWS Cost Explorer and analysed against the work
 
 ### Optimize — Cost & Value Improvement
 
-> Roadmap: [finops-optimization-roadmap.md](optimize/finops-optimization-roadmap.md) · Interactive quadrant: [assets/finops-optimization-quadrant.html](assets/finops-optimization-quadrant.html)
+> Full report: [optimize-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/optimize/optimize-phase-summary.md) Roadmap:[optimize/finops-optimization-roadmap.md](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/optimize/finops-optimization-roadmap.md) · Interactive quadrant: [Internal HR Portal Optimization Priority Matrix](https://claude.ai/public/artifacts/8ad868dc-40dc-4c93-8d6f-50b5a7d9dbab)
 
 Four optimization analysis were produced, covering major cost drivers. Each follows a consistent structure: current state costs are bill-extrapolated from the 5-day actual billing period (actual ÷ 5 × 30). Where an alternative introduces a resource with no billing history, the base cost is calculated from first principles by multiplying the cost per hour by 720 hours (April: 30 days × 24 hours); the usage cost is based on usage estimation for 500 employees within a similar time frame. Each analysis then models dev and prod costs separately across base and usage components, presents a trade-off matrix, and closes with a phased recommendation.
 
@@ -77,8 +77,6 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 |---|---|---|---|
 | Dev | $77.88/mo | ~$47.70/mo | ↑$30.18/mo saving |
 | Prod | $80.13/mo | ~$42.53/mo | ↑$37.60/mo net* |
-
-*Prod net impact reflects the NAT GW + VPC Endpoints cost increase absorbed against savings elsewhere.
 
 ---
 
