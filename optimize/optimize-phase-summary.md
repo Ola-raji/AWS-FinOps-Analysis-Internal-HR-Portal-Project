@@ -27,7 +27,8 @@ All analyses follow a consistent methodology: current state costs are bill-extra
 
 ## Prioritization
 
-Recommendations are scored on impact and effort using a 1–5 scale and plotted on the **FinOps Optimization Priority Matrix**. See [optimization roadmap](finops-optimization-roadmap.md) and [FinOps Optimization Priority Matrix](../assets/finops-optimization-quadrant.html).
+Recommendations are scored on impact and effort using a 1–5 scale and plotted on the **FinOps Optimization Priority Matrix**. See Optimisation Roadmap: [optimize/finops-optimization-roadmap.md](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/optimize/finops-optimization-roadmap.md). [Interactive Optimization Priority Matrix](https://claude.ai/public/artifacts/8ad868dc-40dc-4c93-8d6f-50b5a7d9dbab)
+
 
 **Scoring rubric**
 
