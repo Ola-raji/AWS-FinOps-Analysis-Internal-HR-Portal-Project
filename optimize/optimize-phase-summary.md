@@ -1,7 +1,5 @@
 # Optimize Phase — Cost & Value Improvement
 
-**Project:** ha-web-portal · AWS us-east-1 · April 2026
-
 ---
 
 ## What This Phase Covers
@@ -27,8 +25,7 @@ All analyses follow a consistent methodology: current state costs are bill-extra
 
 ## Prioritization
 
-Recommendations are scored on impact and effort using a 1–5 scale and plotted on the **FinOps Optimization Priority Matrix**. See Optimisation Roadmap: [optimize/finops-optimization-roadmap.md](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/optimize/finops-optimization-roadmap.md). [Interactive Optimization Priority Matrix](https://claude.ai/public/artifacts/8ad868dc-40dc-4c93-8d6f-50b5a7d9dbab)
-
+Recommendations are scored on impact and effort using a 1–5 scale and plotted on the **FinOps Optimization Priority Matrix**. 
 
 **Scoring rubric**
 
@@ -47,6 +44,8 @@ Recommendations are scored on impact and effort using a 1–5 scale and plotted 
 The table below maps each optimization to its quadrant, reflecting where it falls on the impact-effort scoring rubric and the order in which it should be approached.
 
 **Optimization inventory by quadrant**
+
+> See [Optimisation Roadmap](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/optimize/finops-optimization-roadmap.md) & [Interactive Optimization Priority Matrix](https://claude.ai/public/artifacts/8ad868dc-40dc-4c93-8d6f-50b5a7d9dbab)
 
 | Quadrant | Items |
 |---|---|
