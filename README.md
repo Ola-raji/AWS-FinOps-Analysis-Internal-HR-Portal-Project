@@ -58,7 +58,9 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 
 **Optimization Priority Matrix Preview** 
 
-![Internal HR Portal Optimization Priority Matrix](https://github.com/user-attachments/assets/172b56d0-58a6-484a-9f1d-8b4f03c6d01d)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/172b56d0-58a6-484a-9f1d-8b4f03c6d01d" width="500" alt="Internal HR Portal Optimization Priority Matrix"/>
+</p> 
 
 
 **Optimization inventory**
@@ -120,6 +122,3 @@ A governance model established to protect cost posture over time — preventing 
 | Audit owner | FinOps / Finance Team — every Monday |
 | Enforcement | Flag-based via AWS Config `required-tags` rule |
 
----
-
-*AWS us-east-1 · April 2026 · Gross baseline: $77.88/month*
