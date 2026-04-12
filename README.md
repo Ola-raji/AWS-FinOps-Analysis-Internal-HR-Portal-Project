@@ -69,13 +69,13 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 
 | # | Optimization | Analysis | Quadrant | Dev impact | Prod impact |
 |---|---|---|---|---|---|
-| 1 | EC2 scheduled scaling | [↗](ec2-rightsizing-optimization-analysis.md) | Prioritise | ↓$2.72/mo | ↓$2.72/mo |
-| 2 | NAT GW → NAT Instance | [↗](nat-gateway-optimization-analysis.md) | Invest | ↓$23.56/mo | — |
-| 3 | NAT GW + VPC Endpoints | [↗](nat-gateway-optimization-analysis.md) | Invest | — | ↑$43.20/mo* |
-| 4 | RDS gp2 → gp3 | [↗](rds-optimization-analysis.md) | Opportunistic | Value optimization | Value optimization |
-| 5 | Release NAT GW EIP | [↗](vpc-public-ipv4-optimization-analysis.md) | Opportunistic | ↓$3.90/mo | — |
-| 6 | RDS Reserved Instance | [↗](rds-optimization-analysis.md) | Opportunistic | — | ↓$2.88/mo |
-| 7 | Convert ALB to internal | [↗](vpc-public-ipv4-optimization-analysis.md) | Deprioritise | Deferred | Deferred |
+| 1 | EC2 scheduled scaling | [↗](optimize/resource-optimization-analysis/ec2-rightsizing-optimization-analysis-abridged.md) | Prioritise | ↓$2.72/mo | ↓$2.72/mo |
+| 2 | NAT GW → NAT Instance | [↗](optimize/resource-optimization-analysis/nat-gateway-optimization-analysis-abridged.md) | Invest | ↓$23.56/mo | — |
+| 3 | NAT GW + VPC Endpoints | [↗](optimize/resource-optimization-analysis/nat-gateway-optimization-analysis-abridged.md) | Invest | — | ↑$43.20/mo* |
+| 4 | RDS gp2 → gp3 | [↗](optimize/resource-optimization-analysis/rds-optimization-analysis-abridged.md) | Opportunistic | Value optimization | Value optimization |
+| 5 | Release NAT GW EIP | [↗](optimize/resource-optimization-analysis/vpc-public-ipv4-optimization-analysis.md) | Opportunistic | ↓$3.90/mo | — |
+| 6 | RDS Reserved Instance | [↗](optimize/resource-optimization-analysis/rds-optimization-analysis-abridged.md) | Opportunistic | — | ↓$2.88/mo |
+| 7 | Convert ALB to internal | [↗](optimize/resource-optimization-analysis/vpc-public-ipv4-optimization-analysis.md) | Deprioritise | Deferred | Deferred |
 
 *Cost increase — justified on security, operational resilience, and scalability grounds. See [NAT Gateway analysis](optimize/nat-gateway-optimization-analysis.md).
 
