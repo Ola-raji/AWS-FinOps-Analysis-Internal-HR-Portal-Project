@@ -2,7 +2,7 @@
 
 ---
 
-### What This Is
+### What is this project about
 
 This project takes a previously built production-grade, highly available three-tier AWS architecture and applies end-to-end FinOps practice to it — using it as the infrastructure subject for a real cost visibility, optimization, and governance exercise.
 
