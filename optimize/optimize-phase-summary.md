@@ -8,7 +8,7 @@
 
 The Optimize phase converts cost visibility from the Inform phase into actionable recommendations. Each optimization is evaluated across a value spectrum that extends beyond cost alone — encompassing reliability trade-offs, security posture, operational complexity, and long-term scalability. Recommendations are scoped to dev and prod phases separately, recognising that acceptable trade-offs differ materially between pre-production and live environments.
 
-All analyses follow a consistent methodology: current state costs are bill-extrapolated from the 5-day actual billing period (actual ÷ 5 × 30). Where an alternative introduces a resource with no billing history, the base cost is calculated from first principles at 720 hours (April: 30 days × 24hrs). Each analysis then models dev and prod costs separately across base and usage components, presents a trade-off matrix, and closes with a phased recommendation.
+All analyses follow a consistent methodology: current state costs are bill-extrapolated from the 5-day actual billing period (actual ÷ 5 × 30). Where an alternative introduces a resource with no billing history, the base cost is calculated from first principles at 720 hours (April: 30 days × 24hrs); the usage cost is based on usage estimation for 500 employees within a similar time frame. Each analysis then models dev and prod costs separately across base and usage components, presents a trade-off matrix, and closes with a phased recommendation.
 
 ---
 
