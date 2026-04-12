@@ -20,7 +20,7 @@ The existing architecture's capacity is assumed sufficient to serve 500 employee
 
 ### Inform — Cost Visibility
 
-> Full report: [cost-allocation-report.md](inform/cost-allocation-report.md)
+> Full report: [inform-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/blob/main/inform/inform-phase-summary.md)
 
 Real billing data extracted from AWS Cost Explorer and analysed against the workload scenario. Key gap identified on first pass: AWS Cost Explorer defaults to net costs after credits — all charges appeared as $0.00 until a Charge Type = Usage filter was applied. All figures in this portfolio reflect gross spend.
 
@@ -47,15 +47,13 @@ Real billing data extracted from AWS Cost Explorer and analysed against the work
 | Cost per working day | $3.54 |
 | Networking cost ratio | 50% |
 
-Screenshots: [Cost Explorer service breakdown](inform/screenshots/cost-explorer-service-breakdown.png) · [EC2-Other usage types](inform/screenshots/cost-explorer-ec2-other.png) · [Daily spend trend](inform/screenshots/cost-explorer-daily-trend.png)
-
 ---
 
 ### Optimize — Cost & Value Improvement
 
 > Roadmap: [finops-optimization-roadmap.md](optimize/finops-optimization-roadmap.md) · Interactive quadrant: [assets/finops-optimization-quadrant.html](assets/finops-optimization-quadrant.html)
 
-Four optimization analyses produced covering all major cost drivers. Each follows a consistent structure: bill-extrapolated current state, dev and prod phase cost modelling, trade-off matrix, and phased recommendation. Recommendations are prioritised using an impact-effort quadrant framework.
+Four optimization analysis were produced, covering major cost drivers. Each follows a consistent structure: current state costs are bill-extrapolated from the 5-day actual billing period (actual ÷ 5 × 30). Where an alternative introduces a resource with no billing history, the base cost is calculated from first principles by multiplying the cost per hour by 720 hours (April: 30 days × 24 hours); the usage cost is based on usage estimation for 500 employees within a similar time frame. Each analysis then models dev and prod costs separately across base and usage components, presents a trade-off matrix, and closes with a phased recommendation.
 
 **Optimization inventory**
 
