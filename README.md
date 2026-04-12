@@ -1,10 +1,8 @@
-# AWS FinOps Analysis — Internal HR Portal on HA Three-Tier Architecture
-
-**Stack:** EC2 · ALB · ASG · RDS MySQL · NAT Gateway · CloudWatch · us-east-1
+# AWS FinOps Analysis — Internal HR Portal Project 
 
 ---
 
-## What This Is
+### What This Is
 
 This project takes a previously built production-grade, highly available three-tier AWS architecture and applies end-to-end FinOps practice to it — using it as the infrastructure subject for a real cost visibility, optimization, and governance exercise.
 
@@ -14,13 +12,13 @@ All cost analysis is grounded in real AWS billing data, with usage projections m
 
 ---
 
-## Assumptions
+### Assumptions
 
 The existing architecture's capacity is assumed sufficient to serve 500 employees for the purposes of this exercise, operating within AWS Free Tier and promotional credit constraints. The architecture's core design principles — high availability, scalability, fault tolerance, reliability, and operational simplicity — are left fully intact across all phases of this analysis.
 
 ---
 
-## Inform — Cost Visibility
+### Inform — Cost Visibility
 
 > Full report: [cost-allocation-report.md](inform/cost-allocation-report.md)
 
@@ -53,7 +51,7 @@ Screenshots: [Cost Explorer service breakdown](inform/screenshots/cost-explorer-
 
 ---
 
-## Optimize — Cost & Value Improvement
+### Optimize — Cost & Value Improvement
 
 > Roadmap: [finops-optimization-roadmap.md](optimize/finops-optimization-roadmap.md) · Interactive quadrant: [assets/finops-optimization-quadrant.html](assets/finops-optimization-quadrant.html)
 
@@ -84,7 +82,7 @@ Four optimization analyses produced covering all major cost drivers. Each follow
 
 ---
 
-## Operate — Cost Governance
+### Operate — Cost Governance
 
 > Policy: [tagging-governance-policy.md](operate/tagging-governance-policy.md) · Budget setup: [budget-and-anomaly-detection.md](operate/budget-and-anomaly-detection.md)
 
