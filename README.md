@@ -6,15 +6,15 @@
 
 This project takes a previously built production-grade, highly available three-tier AWS architecture and applies end-to-end FinOps practice to it, using it as the infrastructure subject for a real cost visibility, optimization, and governance exercise.
 
-The architecture was originally designed as a general-purpose HA pattern, subsequently adopted as the foundation for an internal read-only HR portal serving 500 employees. The portal provides staff access to employee records, payroll information, HR policies, benefits documentation, and the organisational directory — all read-only, with no write or transactional capability.
+The architecture was originally designed as a general-purpose HA pattern, subsequently adopted as the foundation for an internal read-only HR portal serving 500 employees. The portal provides staff access to employee records, payroll information, HR policies, benefits documentation, and the organisational directory, all read-only, with no write or transactional capability.
 
-All cost analysis is grounded in real AWS billing data, with usage projections modelled against a 500-employee workload operating standard business hours — Monday to Friday, 9am to 5pm.
+All cost analysis is grounded in real AWS billing data, with usage projections modelled against a 500-employee workload operating standard business hours: Monday to Friday, 9am to 5pm.
 
 ---
 
 ### Assumptions
 
-The existing architecture's capacity is assumed sufficient to serve 500 employees for the purposes of this exercise, operating within AWS Free Tier and promotional credit constraints. The architecture's core design principles — high availability, scalability, fault tolerance, reliability, and operational simplicity — are left fully intact across all phases of this analysis.
+The existing architecture's capacity is assumed sufficient to serve 500 employees for the purposes of this exercise, operating within AWS Free Tier and promotional credit constraints. The architecture's core design principles — high availability, scalability, fault tolerance, reliability, and operational simplicity, are left fully intact across all phases of this analysis.
 
 ---
 
@@ -22,11 +22,11 @@ The existing architecture's capacity is assumed sufficient to serve 500 employee
 
 > Full report: [inform-phase-summary.md](Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/inform/INFORM-PHASE-SUMMARY.md)
 
-Real billing data extracted from AWS Cost Explorer and analysed against the workload scenario. Key gap identified on first pass: AWS Cost Explorer defaults to net costs after credits — all charges appeared as $0.00 until a Charge Type = Usage filter was applied. All figures in this portfolio reflect gross spend.
+Real billing data extracted from AWS Cost Explorer and analysed against the workload scenario.  All figures in this portfolio reflect gross spend (AWS credit allowance excluded). 
 
 **Gross monthly baseline — $77.88/month**
-
-| Service | Monthly cost | Share |
+  
+|Service |Monthly cost |Share |
 |---|---|---|
 | NAT Gateway | $27.30 | 35.1% |
 | ALB | $13.50 | 17.3% |
@@ -38,7 +38,7 @@ Real billing data extracted from AWS Cost Explorer and analysed against the work
 **Key findings:**
 - NAT Gateway is the single largest cost driver at 35% — almost entirely a fixed standing charge with near-zero data processing at current traffic volumes
 - 67% of total spend sits on the network layer (NAT Gateway + ALB + VPC Public IPv4) — not on compute or database
-- AWS introduced a $0.005/hr public IPv4 charge in February 2024 — three continuously running IPs add $11.70/month with no usage component
+- Three continuously running IPs add $11.70/month with no usage component
 - 16 taggable resources identified and tagged across 6 cost allocation dimensions. 100% tagging coverage achieved
 
 | | |
