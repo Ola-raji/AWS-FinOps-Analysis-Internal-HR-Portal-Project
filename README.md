@@ -20,7 +20,7 @@ The existing architecture's capacity is assumed sufficient to serve 500 employee
 
 ### Inform — Cost Visibility
 
-> Full report: [inform-phase-summary.md](Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/inform/INFORM-PHASE-SUMMARY.md)
+> Full report: [inform-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/blob/main/inform/INFORM-PHASE-SUMMARY.md)
 
 Real billing data extracted from AWS Cost Explorer and analysed against the workload scenario.  All figures in this portfolio reflect gross spend (AWS credit allowance excluded). 
 
@@ -51,7 +51,7 @@ Real billing data extracted from AWS Cost Explorer and analysed against the work
 
 ### Optimize — Cost & Value Improvement
 
-> Full report: [optimize-phase-summary.md](Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/optimize/OPTIMIZE-PHASE-SUMMARY.md)
+> Full report: [optimize-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/blob/main/optimize/OPTIMIZE-PHASE-SUMMARY.md)
 
 Four optimization analysis were produced, covering major cost drivers. Each follows a consistent structure: current state costs are bill-extrapolated from the 5-day actual billing period (actual ÷ 5 × 30). Where an alternative introduces a resource with no billing history, the base cost is calculated from first principles by multiplying the cost per hour by 720 hours (April: 30 days × 24 hours); the usage cost is based on usage estimation for 500 employees within a similar time frame. Each analysis then models dev and prod costs separately across base and usage components, presents a trade-off matrix, and closes with a phased recommendation.
 
@@ -91,7 +91,7 @@ Four optimization analysis were produced, covering major cost drivers. Each foll
 
 ### Operate — Cost Governance
 
-> Full Report: [operate-phase-summary.md](Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/operate/OPERATE-PHASE-SUMMARY.md) · Tagging Policy: [tagging-governance-policy.md](operate/tagging-governance-policy.md) · Budget setup: [budget-and-anomaly-detection.md](operate/budget-and-anomaly-detection.md)
+> Full Report: [operate-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/blob/main/operate/OPERATE-PHASE-SUMMARY.md) · Tagging Policy: [tagging-governance-policy.md](operate/tagging-governance-policy.md) · Budget setup: [budget-and-anomaly-detection.md](operate/budget-and-anomaly-detection.md)
 
 A governance model established to protect cost posture over time — preventing optimization gains from eroding as the architecture evolves.
 
