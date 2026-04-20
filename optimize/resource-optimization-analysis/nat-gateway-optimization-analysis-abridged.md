@@ -49,7 +49,7 @@ NAT Gateway removed. Five Interface Endpoints across 2 AZs serve AWS-internal tr
 
 ### Alternative B — NAT Instance (t3.nano)
 
-Managed NAT Gateway replaced with a self-operated EC2 instance. No per-GB processing charge. Data transfer out at prod volumes falls within AWS free tier thresholds. New resource — cost calculated at 720 hours ($0.0052 × 720 = $3.74).
+Managed NAT Gateway replaced with a self-operated EC2 instance. No per-GB processing charge. New resource — cost calculated at 720 hours ($0.0052 × 720 = $3.74).
 
 | Charge | Rate | Dev expected usage | Prod expected usage |
 |---|---|---|---|
