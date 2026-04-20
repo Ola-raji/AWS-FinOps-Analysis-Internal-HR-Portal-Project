@@ -63,7 +63,7 @@ Managed NAT Gateway replaced with a self-operated EC2 instance. No per-GB proces
 
 ---
 
-### Alternative C — Retain NAT Gateway + Selective VPC Endpoints
+### Alternative C — Retain NAT Gateway + A private Link Network (Selective VPC Endpoints)
 
 NAT Gateway retained for internet egress. VPC Endpoints added for SSM and CloudWatch only, redirecting AWS-internal traffic off the public internet path. NAT Gateway base cost uses bill-extrapolated figure ($27.30) — same resource as current state. VPC Endpoints are new resources — calculated at 720 hours (3 × 2 × $0.01 × 720 = $43.20).
 
