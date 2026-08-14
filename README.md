@@ -18,9 +18,10 @@ The existing architecture's capacity is assumed sufficient to serve 500 employee
 
 ---
 
-### Inform — Cost Visibility
+### Cost Visibility
 
-> Full report: [inform-phase-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/blob/main/inform/INFORM-PHASE-SUMMARY.md)
+> Full report: [Cost Visibility
+-summary.md](https://github.com/Ola-raji/AWS-FinOps-Analysis-Internal-HR-Portal-Project/blob/main/inform/INFORM-PHASE-SUMMARY.md)
 
 Real billing data extracted from AWS Cost Explorer and analysed against the workload scenario.  All figures in this portfolio reflect gross spend (AWS credit allowance excluded). 
 
