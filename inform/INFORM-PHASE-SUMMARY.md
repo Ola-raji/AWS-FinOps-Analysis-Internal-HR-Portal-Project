@@ -18,11 +18,11 @@ This phase produced four outputs: a Cost Explorer analysis, a tagging schema and
 
 AWS Cost Explorer was configured to expose gross usage charges. Three views were built and captured as evidence:
 
-| View | Purpose | Screenshot |
-|---|---|---|
-| Service breakdown | Identify top cost drivers by service | [cost-explorer-service-breakdown.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-by-service.png) |
-| EC2-Other usage types | Expose NAT Gateway and public IPv4 charges hidden under EC2-Other | [cost-explorer-ec2-other.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-ec2-other.png) |
-| Daily spend trend | Establish burn rate baseline | [cost-explorer-daily-trend.png](Ola-raji/AWS-FinOps-Analysis--Internal-HR-Portal-Project/inform/Cost Explorer Report/cost-explorer-daily-trend.png) |
+| View | Purpose|
+|---|---|
+| Service breakdown | Identify top cost drivers by service  |
+| EC2-Other usage types | Expose NAT Gateway and public IPv4 charges hidden under EC2-Other |
+| Daily spend trend | Establish burn rate baseline  |
 
 The EC2-Other view was the most revealing. NAT Gateway hourly charges completely dominated the bar, while data processing charges were negligible — confirming that NAT Gateway cost is almost entirely a fixed standing charge, not a traffic-driven one.
 
